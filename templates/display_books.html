@@ -3,12 +3,18 @@
 {%block content%} 
 
 <h2>View books:</h2>
+<div class='book_container'>
+    {% for book in book_list %}
+        <div class='book'>
+            <h2> {{book.title}} </h2>
+            <h3> {{book.author}} </h3>
+            <h3> {{book.genre}} </h3>
+        </div>
+        {% endfor %}
+    </div>
 
-<div></div>
-    
+ {% endblock %} 
 
 
-<div></div>   
+ 
 
-
-{% endblock %} 

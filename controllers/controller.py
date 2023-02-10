@@ -1,12 +1,11 @@
 from flask import render_template, request, redirect
 from app import app
 from models.book import *
-from models.book_list import *
-from datetime import datetime
+from models.book_list import book_list
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index.html', book_list = book_list)
 
 @app.route('/stock')
 def display_stock():
