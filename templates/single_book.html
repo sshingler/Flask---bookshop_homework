@@ -6,16 +6,28 @@
 
 <div class='book_container'>
         <div class='book'>
-            <h4>Title:</h4>
-            <h3> {{book.title}} </h3>
-            <h4>Author:</h4>
-            <h3> {{book.author}} </h3>
-            <h4>Genre:</h4>
-            <h3> {{book.genre}} </h3>
-            <h4>Description:</h4>
-            <h3> {{book.description}} </h3>
-            <h4>Price:</h4>
-            <h3> £{{book.price}} </h3>
+            {% for book in book_list %}
+                <h4>Title:</h4>
+                <h3> {{book.title}} </h3>
+                <h4>Author:</h4>
+                <h3> {{book.author}} </h3>
+                <h4>Genre:</h4>
+                <h3> {{book.genre}} </h3>
+                <h4>Description:</h4>
+                <h3> {{book.description}} </h3>
+                <h4>Price:</h4>
+                <h3> £{{book.price}} </h3>   
+                <h4>Delete book:</h4>
+            
+                <form action="/stock/delete" method="POST">
+                    <input
+                    type="hidden"
+                    value="{{book_list.index(book)}}"
+                    name="delete"
+                    />
+                    <input class="delete_button" type="submit" value="&#9587;" />
+                </form>  
+            {% endfor %}     
         </div>
     </div>
 

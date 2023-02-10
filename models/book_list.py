@@ -10,4 +10,18 @@ book_list = [book_1, book_2, book_3]
 def add_new_book(book):
     book_list.append(book)
 
+def delete_book(index):
+    book_list.pop(index)
 
+
+
+
+# h4>Delete book:</h4>
+#                 <form action="/stock/delete" method="POST">
+#                     <input
+#                     type="hidden"
+#                     value="{{book_list.index(book)}}"
+#                     name="delete"
+#                     />
+#                     <input class="delete_button" type="submit" value="&#9587;" />
+#                 </form>
