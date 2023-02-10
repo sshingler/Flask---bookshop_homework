@@ -2,9 +2,9 @@
 
 {%block content%} 
 
-<h2>View books:</h2>
+<h2>Book detail:</h2>
+
 <div class='book_container'>
-    {% for book in book_list %}
         <div class='book'>
             <h4>Title:</h4>
             <h3> {{book.title}} </h3>
@@ -12,13 +12,11 @@
             <h3> {{book.author}} </h3>
             <h4>Genre:</h4>
             <h3> {{book.genre}} </h3>
-            <a href="/stock/{{book_list.index(book)}}">Show Details</a>
+            <h4>Description:</h4>
+            <h3> {{book.description}} </h3>
+            <h4>Price:</h4>
+            <h3> £{{book.price}} </h3>
         </div>
-        {% endfor %}
     </div>
 
- {% endblock %} 
-
-
- 
-
+{% endblock %} 
