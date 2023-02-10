@@ -1,0 +1,19 @@
+body {
+    background-color: #92BCEA;
+  }
+
+
+.book_container {
+    display:flex;
+    flex-wrap: wrap;  
+    justify-content: space-around; 
+}
+
+.book {
+    display:flex; 
+    flex-direction: column;
+    width: 20vw;
+    background-color: #617073;
+    padding: 10px;
+    margin:20px;
+}
