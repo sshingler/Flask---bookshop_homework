@@ -16,12 +16,3 @@ def delete_book(index):
 
 
 
-# h4>Delete book:</h4>
-#                 <form action="/stock/delete" method="POST">
-#                     <input
-#                     type="hidden"
-#                     value="{{book_list.index(book)}}"
-#                     name="delete"
-#                     />
-#                     <input class="delete_button" type="submit" value="&#9587;" />
-#                 </form>
