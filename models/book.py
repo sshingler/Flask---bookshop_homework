@@ -1,12 +1,14 @@
 class Book():
 
-    def __init__(self, title, author, genre, description, price):
+    def __init__(self, title, author, genre, description, in_stock):
         self.title = title
         self.author = author
         self.genre = genre 
         self.description = description 
-        self.price = price
+        self.in_stock = in_stock
 
+    def __nonzero__(self):
+        return self.in_stock !=0 
 
    
 
