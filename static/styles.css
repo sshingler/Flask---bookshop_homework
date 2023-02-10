@@ -44,6 +44,10 @@ iframe{
     border-style: solid;
 }
 
+.book_container h4 {
+    margin: 5px; 
+}
 .book_container h3 {
     color: rgb(130 147 153);
+    margin: 5px; 
 }
