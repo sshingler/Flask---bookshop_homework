@@ -1,7 +1,7 @@
 from flask import render_template, request, redirect
 from app import app
 from models.book import *
-from models.book_list import book_list
+from models.book_list import book_list, add_new_book
 
 @app.route('/')
 def index():
@@ -17,5 +17,18 @@ def book_detail(display_stock):
     return render_template ('single_book.html', book = chosen_book)
 
 @app.route('/stock/add')
-def add_stock():
+def new_book():
     return render_template('add_book.html')
+
+@app.route('/stock', methods=['POST'])
+def add_book():
+    title = request.form['title']
+    author = request.form['author']
+    genre = request.form['genre']
+    description = request.form['description']
+    price = request.form['price']
+    new_book = Book (title, author, genre, description, price)
+    add_new_book(new_book)
+    return redirect("/")
+
+
