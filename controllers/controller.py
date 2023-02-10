@@ -26,7 +26,11 @@ def add_book():
     author = request.form['author']
     genre = request.form['genre']
     description = request.form['description']
-    new_book = Book (title, author, genre, description)
+    if request.form.get('available'):
+        availability = True
+    else:
+        availability = False 
+    new_book = Book (title, author, genre, description, availability)
     add_new_book(new_book)
     return redirect("/stock")
 
