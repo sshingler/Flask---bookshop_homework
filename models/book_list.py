@@ -1,4 +1,4 @@
-from models.book import *
+from models.book import Book
 import datetime
 
 book_1 = Book("Python for Beginners", "Tim Wapling", "Education", "A book about the Python programming language, written for beginners. Learn everything you need to know!", True)
